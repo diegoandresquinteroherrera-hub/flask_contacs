@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contactos</title>
+  </head>
+  <body>
+    <h1>Contactos</h1>
+    <ul>
+      {% for contacto in contactos %}
+      <li>
+        {{contacto.nombre }} - {{contacto.correo }} - {{contacto.telefono }}
+      </li> 
+      
+      {% endfor %}
+    </ul>
+
+    <table>
+        <tr>
+            <td>NOMBRE</td>
+            <td>CORREO</td>
+            <td>TELEFONO</td>
+        </tr>
+        {% for contacto in contactos %}
+            <tr>
+                <td>{{contacto.nombre}}</td>
+                <td>{{contacto.correo}}</td>
+                <td>{{contacto.telefono}}</td>
+            </tr>
+
+        {% endfor %}
+    </table>
+<a href="/agregar">agregar</a>
+
+  </body>
+</html>
