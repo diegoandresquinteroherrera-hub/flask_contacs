@@ -25,8 +25,8 @@ def inicio():
 def contactos():
     
     lista_contactos = contacto.query.all()
-    
-    return render_template("contactos.html", contactos = lista_contactos)
+    lista_ordenada = sorted(lista_contactos, key =lambda contacto : contacto.nombre)
+    return render_template("contactos.html", contactos = lista_ordenada)
 
 @app.route("/agregar", methods=["GET", "POST"])
 def agregar_contactos():

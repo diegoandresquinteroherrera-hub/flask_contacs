@@ -7,3 +7,7 @@ body {
 h1 {
     color: #333;
 }
+
+table{
+    border: 2px solid rgb(42, 238, 7);
+}
