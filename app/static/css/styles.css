@@ -1,0 +1,40 @@
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+
+}
+h1 {
+    color: #333;
+}
+
+table{
+    border: 2px solid rgb(42, 238, 7);
+}
+a{
+    
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-flex;
+    background-color: rgb(219, 220, 220);
+}
+
+p{
+    font-size: 30px;
+}
+
+.contacto:hover{
+    background-color: rgb(154, 166, 166);
+}
+
+.agregar:hover{
+        background-color: rgb(154, 166, 166);
+}

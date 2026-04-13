@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Contacto</title>
+</head>
+<body>
+    <h2>EDITAR CONTACTO</h2>
+    <form method="POST">
+        <Label>Nombre:</Label>
+        <input type="text" name="nombre" value="{{ contacto.nombre }}">
+        <br><br>
+
+        <label>Correo</label>
+        <input type="email" name="correo" value="{{ contacto.correo }}">
+        <br><br>
+
+        <label >Teléfono</label>
+        <input type="text" name="telefono" value="{{ contacto.telefono }}">
+        <br><br>
+
+        <button type="submit">Actualizar</button>
+
+        <a href="/contactos">volver</a>
+    </form>
+    
+</body>
+</html>
