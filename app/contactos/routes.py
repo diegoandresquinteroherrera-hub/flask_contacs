@@ -45,7 +45,7 @@ def agregar_contacto():
         
         db.session.add(nuevo)
         db.session.commit()
-        
+        flash("contacto creado correctamente")
        
     return render_template("agregar_contactos.html")
 

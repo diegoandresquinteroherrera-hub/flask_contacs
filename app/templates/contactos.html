@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block contenido %}
+  <h1>Contactos</h1>
+
+  {% with messages = get_flashed_messages(with_categories=true) %} {% for
+  category, message in messages %}
+  <p style="color: green">{{ message }}</p>
+  {% endfor %} {% endwith %}
+
+  <div class="content-buttons">
+    <a href="/" class="btn-return">🡸</a>
+    <a href="/agregar" class="button">agregar</a>
+  </div>
+
+  <table class="custom-table">
+    <tr>
+      <th>NOMBRE</th>
+      <th>CORREO</th>
+      <th>TELEFONO</th>
+      <th>ACCIONES</th>
+    </tr>
+    {% for contacto in contactos %}
+    <tr>
+      <td>{{contacto.nombre}}</td>
+      <td>{{contacto.correo}}</td>
+      <td>{{contacto.telefono}}</td>
+      <td>
+        <a href="/editar/{{ contacto.id }}">Editar</a> <br />
+        <a
+          href="/eliminar/{{ contacto.id }}"
+          onclick="return confirm('desea elimanar el contacto?');"
+          >Eliminar</a
+        >
+      </td>
+    </tr>
+
+    {% endfor %}
+  </table>
+
+  <!-- numero de contactos-->
+  <p>Total de contactos: {{ contactos|length }}</p>
+{% endblock %}

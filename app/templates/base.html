@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema Contactos</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/styles.css')}}"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/contactos" class="contacto">Contactos</a>
+          <br /><br /><br />
+        </li>
+        <li>
+          <a href="/agregar" class="agregar">Agregar un contacto</a>
+        </li>
+      </ul>
+    </nav>
+
+    <hr />
+
+    {%with mensajes = get_flashed_messages() %} {% if mensajes %} {%for mensaje
+    in mensajes %}
+    <p class="flash">{{ mensaje }}</p>
+    {% endfor %} {% endif %} {% endwith %} {% block contenido %}{% endblock %}
+  </body>
+</html>
